@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Electron + TypeScript 🚀</h1>
+
+    <button onclick="ask()">Test Ollama</button>
+
+    <script>
+      async function ask() {
+        const res = await fetch('http://localhost:11434/api/generate', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            model: 'llama3',
+            prompt: 'Say hello'
+          })
+        });
+
+        const data = await res.json();
+        console.log(data);
+        alert(JSON.stringify(data.response));
+      }
+    </script>
+  </body>
+</html>
