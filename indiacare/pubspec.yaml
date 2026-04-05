@@ -28,6 +28,9 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  speech_to_text: ^6.6.0
+  flutter_tts: ^3.8.5
+  http: ^1.2.0
   flutter:
     sdk: flutter
 
